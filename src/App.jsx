@@ -1,17 +1,20 @@
 
+import { useLayoutEffect } from 'react'
 import { DashBoard } from './Components/DashBoard'
 import { MainPanel } from './Components/MainPanel'
-import { getData}  from './helpers/getData'
+import { responsiveScript } from './Hooks/responsiveScript'
 
 
-function App() {
 
-  const {getEmpresa}= getData();
+function  App ()  {
 
-  getEmpresa().then(data => {
-    console.log(data)
-  })
+  useLayoutEffect(() => {
+    
+    responsiveScript();
 
+  }, [])
+
+  window.addEventListener('resize', responsiveScript);
 
 
 

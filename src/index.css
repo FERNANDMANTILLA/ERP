@@ -1,4 +1,27 @@
-.table-default{
-    height: 15rem;
-    max-height: 25rem;
+.table-default {
+    list-style-type: none;
+    margin: 0;
+    overflow: auto;
+    overflow-y: auto;
+    position: relative;
+    overflow-y: scroll;
+    min-height: 10rem;
+    max-height: calc(15rem);
+    display: flex;
+    flex: 1 1 0rem;
+    flex-direction: column;
+}
+
+.panel {
+
+    list-style-type: none;
+
+    background-color: var(--gray);
+    overflow: auto;
+    overflow-y: scroll;
+    height: calc(30rem);
+    display: flex;
+
+    flex-direction: column;
+
 }

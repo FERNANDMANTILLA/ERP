@@ -1,36 +1,28 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getData} from "../helpers/getData";
 
 
-export const useFetch = (url) => {
-    const [state, setState] = useState({
-        data: "",
-        loading: true,
-        error: null,
-    });
+ export const useFetch = (id = "" ) => {
+    
+    const [Empresa, setEmpresa] =   useState([]);
+
+    useEffect(() => {
+        getData(id).then(({data}) => {
+            setEmpresa(data);
+        }
+        );
+    
+    }, [id]);
+
    
+
     
 
 
-    const getFetch = async () => {
-        setState({ ...state,
-             loading: true 
-            });
+    return {
+        Empresa,
+        setEmpresa,
+    }
 
-        const response = await fetch(url);
-        const data = await response.json();
-        console.log(url);
-        setState({
-            data,
-            loading: false,
-            error: null,
-        });
+}
 
-    };
-
-    useEffect(() => {
-        getFetch();
-    }, [url]);
-
-    return{...state,};
-};

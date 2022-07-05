@@ -1,15 +1,27 @@
 
-export const getData = () => {
-
-    const getEmpresa = async () => {
-  
-        const response = await fetch('http://paolopgspring.herokuapp.com/api/emails');
-
+ const  getData = async (id) => {
+        const response = await fetch(`http://paolopgspring.herokuapp.com/api/empresas/${id}`);
         const data = await response.json();
-        console.log(data);
-    
-    }
+        return { data } ;
+}
+
+const setData = async (id, data) => {
+
+        const response = await fetch(`http://paolopgspring.herokuapp.com/api/empresa/${id}`, {
+                method: 'PUT',
+                headers: {
+                        'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+        });
+      
+
+}
 
 
-  return {getEmpresa,};
+
+export{
+        getData,
+        setData,
+
 }

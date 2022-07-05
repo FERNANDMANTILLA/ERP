@@ -1,6 +1,23 @@
 import {Link} from 'react-router-dom';
+import { useFetch } from "../../Hooks/useFetch"
+import { useLayoutEffect, useState } from "react";
+import { TableItem2 } from './TableItem2';
 
 export const Table2 = () => {
+
+
+    const [Filter, setFilter] = useState([])
+
+    const {Empresa} = useFetch ();
+
+    useLayoutEffect(() => {
+
+    const filter = Empresa.filter(({nuevo})=> nuevo===false);
+    setFilter(filter);
+
+    }, [Empresa])
+
+    if(Empresa != 0){
     return (
         <ul className='table list-group  table-default '>
             <li className=' list-group-item p-0 d-flex text-white font-weight-bolder '>
@@ -11,14 +28,12 @@ export const Table2 = () => {
             <span className='col-4 bg-gray-dark border-bottom border-right border-black'>ACTUALIZADO</span>
             
             </li>
-            <li className=' list-group-item p-0  d-flex'>
-            <span className='col-1 bg-gray p-1  border-bottom border-right border-black modal-dialog-centered'>hola</span>
-            <span className='col-2 bg-gray p-1 border-bottom border-right border-black modal-dialog-centered'>123</span>
-            <span className='col-4 bg-gray p-1 border-bottom border-right border-black modal-dialog-centered'>asd</span>
-            <span className='col-1 bg-gray p-1 border-bottom border-right border-black modal-dialog-centered'>asd</span>
-            <span className='col-4 bg-gray d-flex justify-content-between border-bottom border-right border-black modal-dialog-centered'>FECHA<Link to='detalles' className='btn btn-danger rounded-2 p-1 m-1'>DETALLES</Link></span>
-            </li>
+            {Filter.map((empresa,index) => {
+                    return <TableItem2 key={index} empresa={empresa} index={index}/>
+                })}
 
         </ul>
-    )
+    )}
+    else{
+        return <div className="row justify-content-center w-100">Loading...</div>}
 }
