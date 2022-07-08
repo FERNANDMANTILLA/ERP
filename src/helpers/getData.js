@@ -1,13 +1,13 @@
 
  const  getData = async (id) => {
-        const response = await fetch(`http://paolopgspring.herokuapp.com/api/empresas/${id}`);
+        const response = await fetch(`http://proyecto-erp.herokuapp.com/api/empresas/${id}`);
         const data = await response.json();
         return { data } ;
 }
 
 const setData = async (id, data) => {
 
-        const response = await fetch(`http://paolopgspring.herokuapp.com/api/empresa/${id}`, {
+        const response = await fetch(`http://proyecto-erp.herokuapp.com/api/empresa/${id}`, {
                 method: 'PUT',
                 headers: {
                         'Content-Type': 'application/json'
