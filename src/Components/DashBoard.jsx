@@ -8,6 +8,7 @@ export const DashBoard = () => {
         <Link className="list-group-item list-group-item-action shadow-box-3" to="nuevaempresa">EMP. NUEVAS</Link>
         <Link className="list-group-item list-group-item-action shadow-box-3" to="empresas">EMPRESAS</Link>
         <Link className="list-group-item list-group-item-action shadow-box-3" to="vendedores">VENDEDORES</Link>
+        <Link className="list-group-item list-group-item-action shadow-box-3" to="usuarios">USUARIOS</Link>
 
         </ul>
       </div>

@@ -6,6 +6,7 @@ import { CreateEmpresa } from '../Pages/CreateEmpresa';
 import {Navigate} from 'react-router-dom';
 import { Detalles } from '../Pages/Detalles';
 import { Vendedores } from '../Pages/Vendedores';
+import { Usuarios } from '../Pages/Usuarios';
 
 export const Router = () => {
   return (
@@ -16,6 +17,7 @@ export const Router = () => {
     <Route path="complete/:id" element={<CreateEmpresa/>} />
     <Route path="/empresas/detalles/:id" element={<Detalles/>} />
     <Route path="/vendedores" element={<Vendedores/>} />
+    <Route path="/usuarios" element={<Usuarios/>} />
     {/* <Route path="*" element={<Navigate to="/" />}></Route> */}
 
     </Routes>

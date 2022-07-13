@@ -1,7 +1,7 @@
 import React from 'react'
 import { TableItem3 } from './TableItem3'
 
-export const Table3 = ({Entity = []}) => {
+export const Table3 = ({Data = []}) => {
 
 
     return (

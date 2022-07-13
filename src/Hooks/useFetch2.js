@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getData} from "../helpers/getData";
 
 
-export const useFetch2 = ({id}) => {
+export const useFetch2 = (id) => {
 
     const [Vendedores, setVendedores] =   useState([]);
 

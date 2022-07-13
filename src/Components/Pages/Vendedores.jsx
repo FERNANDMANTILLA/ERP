@@ -1,7 +1,12 @@
 import React from "react";
 import { Table3 } from "../Common/Table3";
+import { useFetch2 } from "../../Hooks/useFetch2";
 
 export const Vendedores = () => {
+
+  const { Vendedor } = useFetch2();
+  const Data = Vendedor;
+
   return (
     <>
       <div className="row justify-content-center w-100">
@@ -14,7 +19,7 @@ export const Vendedores = () => {
         </div>
 
         <div className=" row w-75 bg-gray">
-          <Table3 />
+          <Table3 Data={Data} />
         </div>
       </div>
     </>

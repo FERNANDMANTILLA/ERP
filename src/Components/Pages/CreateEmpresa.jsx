@@ -25,7 +25,6 @@ export const CreateEmpresa =  ()  => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
   }
 
   const handleSend = () => {

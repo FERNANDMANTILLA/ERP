@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { getData} from "../helpers/getData";
 
 
- export const useFetch = (id) => {
-    
+ export const useFetch = (id)=> {
     const [Empresa, setEmpresa] =   useState([]);
 
     useEffect(() => {

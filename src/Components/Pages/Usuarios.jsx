@@ -1,6 +1,11 @@
 import React from 'react'
-
+import { useFetch3 } from '../../Hooks/useFetch3';
+import { Table3 } from "../Common/Table3";
 export const Usuarios = () => {
+
+  const {Usuario} =useFetch3();
+  const Data = Usuario;
+
   return (
     <>
       <div className="row justify-content-center w-100">
@@ -13,7 +18,7 @@ export const Usuarios = () => {
         </div>
 
         <div className=" row w-75 bg-gray">
-          <Table3 Entitiy= ""/>
+          <Table3 Data={Data}/>
         </div>
       </div>
     </>
