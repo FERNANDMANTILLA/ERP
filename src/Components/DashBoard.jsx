@@ -7,7 +7,7 @@ export const DashBoard = () => {
         <ul className="list-group gap-5">
         <Link className="list-group-item list-group-item-action shadow-box-3" to="nuevaempresa">EMP. NUEVAS</Link>
         <Link className="list-group-item list-group-item-action shadow-box-3" to="empresas">EMPRESAS</Link>
-        <Link className="list-group-item list-group-item-action shadow-box-3" to="/">MANTENIMIENTOS</Link>
+        <Link className="list-group-item list-group-item-action shadow-box-3" to="vendedores">VENDEDORES</Link>
 
         </ul>
       </div>

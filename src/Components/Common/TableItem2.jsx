@@ -72,7 +72,7 @@ export const TableItem2 = ({ empresa, index }) => {
             <span className='col-2 bg-gray p-1 justify-content-center border-bottom border-right border-black modal-dialog-centered'>{empresa.ruc}</span>
             <span className='col-4 bg-gray p-1 justify-content-center border-bottom border-right border-black modal-dialog-centered'>{empresa.razon_social}</span>
             <span className='col-1 bg-gray p-1 justify-content-center border-bottom border-right border-black modal-dialog-centered'>{porcentaje}</span>
-            <span className='col-4 bg-gray d-flex justify-content-evently border-bottom border-right border-black modal-dialog-centered'>{empresa.fecha}<Link to={`detalles/${empresa.id}`} className='btn btn-danger rounded-1 m-1 p-1'>DETALLES</Link></span>
+            <span className='col-4 bg-gray d-flex justify-content-evently border-bottom border-right border-black modal-dialog-centered'>{empresa.fecha}<Link to={`detalles/${empresa.id}`} className='btn btn-yellow text-dark rounded-1 m-1 p-1'>DETALLES</Link></span>
         </li>
     )
 }
